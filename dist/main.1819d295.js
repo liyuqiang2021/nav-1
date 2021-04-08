@@ -194,5 +194,9 @@ $(document).on('keypress', function (e) {
     }
   }
 });
+$('.searchForm').keypress(function (e) {
+  e.stopPropagation(); //阻止事件冒泡
+  // return false; 不止阻止冒泡而且阻止事件本身
+});
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.f8e7286e.js.map
+//# sourceMappingURL=main.1819d295.js.map
