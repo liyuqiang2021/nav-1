@@ -77,7 +77,12 @@ $(document).on('keypress', (e) => {
     const { key } = e
     for (let i = 0; i < hashMap.length; i++) {
         if (hashMap[i].logo.toLowerCase() === key) {
-            window.open(hashMap[i].url)
+            window.open(hashMap[i].url);
         }
     }
+})
+
+$('.searchForm').keypress((e) => {
+    e.stopPropagation() //阻止事件冒泡
+    // return false; 不止阻止冒泡而且阻止事件本身
 })
